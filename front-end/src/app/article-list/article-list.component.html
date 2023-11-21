@@ -1,0 +1,25 @@
+<div><br/><br/><br/></div>
+<div class="container">
+  <h3>Welcome to ToomBook</h3>
+  <h5>See there all our new post...</h5>
+</div>
+
+<div class="container card" *ngFor="let article of articles">
+    <div class="card-body"><br>
+        <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <span class="w3-right w3-opacity">32 min</span>
+        <h4>Admin</h4><br>
+        <hr class="w3-clear">
+        <p>{{ article.title }}</p>
+        <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%; height: 100px;" class="w3-margin-bottom">
+        <p>{{ article.content }}...</p>
+        <div class="">
+          <button type="button" class="btn btn-success"><i class="fa fa-thumbs-up"></i>  Like</button> &nbsp;
+          <button type="button" class="btn btn-info"><i class="fa fa-comment"></i>  Comment (12)</button> 
+          <i class="fa fa-eye w3-right" style="color: gray;"> (8)</i>  
+        </div>
+      </div> 
+</div>
+
+
+  

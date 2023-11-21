@@ -1,0 +1,72 @@
+
+<div><br/><br/><br/></div>
+<div class="container mt-4" >
+    <h2>Student Registration</h2>
+<div class="">
+           
+<form>
+   
+    <div class="form-group">
+      <label >Student Name :</label>
+      <input type="text"  [(ngModel)]="name" [ngModelOptions]="{standalone: true}"   class="form-control" id="studentname" name="studentname" placeholder="Enter Name">
+    </div>
+    
+    <div class="form-group">
+        <label >Address :</label>
+        <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}" class="form-control" id="studentaddress" name="studentaddress" placeholder="Enter Address">
+      </div>
+
+      <div class="form-group">
+        <label >Mobile :</label>
+        <input type="text" [(ngModel)]="fee" [ngModelOptions]="{standalone: true}" class="form-control" id="fee" name="text" placeholder="Enter Fee">
+      </div>
+
+      <button type="submit" class="btn btn-primary col-3" (click)="saveRecords()" >Save</button> &nbsp;
+      
+      <button type="submit" class="btn btn-warning col-3" (click)="UpdateRecords()" >Update</button> &nbsp;
+      <button type="submit" routerLink="article-list" class="btn btn-info col-3" >Go to Post</button>
+  </form>
+</div>
+</div>
+
+<div><br/></div>
+<div>
+    <div class="container" >
+        <h3>Student Table</h3>
+    <table class="table col-12">
+        <thead>     
+        <tr>
+            <th>Avatar</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Fee</th>
+            <th scope="col">Options</th>
+          
+        </thead>
+        <tbody>
+            <tr *ngFor="let StudentItem of StudentArray">
+           
+            <td ><img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-circle" style="height:30px;width:30px" alt="Avatar"></td>
+            <td>{{StudentItem.name}}</td>
+            <td>{{StudentItem.address }}</td>
+            <td>{{StudentItem.fee}}</td>
+            <td>
+                <button type="button" class="btn btn-success col-4" (click)="setUpdate(StudentItem)">Edit</button>
+                &nbsp;
+                <button type="button" class="btn btn-danger col-4" (click)="setDelete(StudentItem)">Delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+ 
+ 
+    </div>
+
+    <footer class="w3-container w3-theme-d3 w3-padding-16">
+      <h5></h5>
+    </footer>
+    
+    <footer class="w3-container w3-theme-d5">
+      <p>Made by <a href="" target="_blank">patbook</a></p>
+    </footer>
